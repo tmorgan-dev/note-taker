@@ -10,5 +10,16 @@ router.get("/notes", (req, res) => {
         res.json(notesData)
     })
 })
+router.post("/notes", (req, res) => {
+    const notesData = JSON.parse(fs.readFileSync("./db/db.json", "utf8"))
+    const newNote = {
+        title: req.body.title,
+        text: req.body.text,
+        id: uuidv4()
+    }
+    notesData.push(newNote)
+    fs.writeFileSync("./db/db.json", JSON.stringify(notesData))
+    res.json(notesData)
+})
 
 module.exports = router
