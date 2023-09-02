@@ -22,4 +22,14 @@ router.post("/notes", (req, res) => {
     res.json(notesData)
 })
 
+router.delete("/notes/:id", (req, res) => {
+    const notesData = JSON.parse(fs.readFileSync("./db/db.json", "utf8"))
+    const notesCollection = notesData.filter((note) => {
+        return note.id !== req.params.id
+
+    })
+    fs.writeFileSync("./db/db.json", JSON.stringify(notesCollection))
+    res.json(console.log({message:"You deleted your note"}))
+})
+
 module.exports = router
