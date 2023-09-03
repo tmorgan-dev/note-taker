@@ -10,10 +10,12 @@
 - [Tests](#tests)
 - [Questions?](#questions)
   ## Installation
-  Navigate to the URL hosted by Railway
+  Navigate to the URL hosted by Railway [here](http://note-taker.up.railway.app)
+  
   ## Usage
   Click the button to start the process. Add notes and save them with the diskette icon. Delete them with the trashcan icon.
-  
+  ![Screenshot 2023-09-03 124506](https://github.com/tmorgan-dev/note-taker/assets/132379127/5dfb9690-449c-49a8-8f96-fd438b0bea46)
+
   ## License
   No License
   
